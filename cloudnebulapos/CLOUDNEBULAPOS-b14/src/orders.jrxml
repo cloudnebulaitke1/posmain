@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4cff545c-bc88-47f3-bd57-8dc9ace6180e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     orders.`time` AS time,
+     orders.`item` AS item,
+     orders.`first_name` AS first_name,
+     orders.`second_name` AS second_name,
+     orders.`last_name` AS last_name,
+     orders.`telephone` AS telephone,
+     orders.`address` AS address,
+     orders.`national_id` AS national_id,
+     orders.`amount` AS amount
+FROM
+     `orders` orders]]>
+	</queryString>
+	<field name="time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="national_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="time">
+		<groupExpression><![CDATA[$F{time}]]></groupExpression>
+	</group>
+	<group name="first_name">
+		<groupExpression><![CDATA[$F{first_name}]]></groupExpression>
+	</group>
+	<group name="telephone">
+		<groupExpression><![CDATA[$F{telephone}]]></groupExpression>
+	</group>
+	<group name="amount">
+		<groupExpression><![CDATA[$F{amount}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="27" width="291" height="52" uuid="2cc60440-1d56-4a7e-b203-ceb589cf5b66"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDERED ITEM]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="25" width="116" height="20" uuid="4364c8a8-a79e-4eb8-b5cc-e0f35fdc70dc"/>
+				<text><![CDATA[ORDER TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="25" width="51" height="20" uuid="6312dc58-7b37-4e81-9483-045c498adba8"/>
+				<text><![CDATA[ITEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="25" width="71" height="20" uuid="699a4ab9-764b-49e3-8178-f1004e875cde"/>
+				<text><![CDATA[FIRST NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="25" width="66" height="20" uuid="46d20122-07c4-498d-a95d-bb97607238c5"/>
+				<text><![CDATA[NATIONAL ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="25" width="52" height="20" uuid="795f1152-b8f9-4520-b516-bf1d555c6115"/>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="25" width="75" height="20" uuid="f7a5521b-ff88-43a7-894b-cb4aa9753440"/>
+				<text><![CDATA[TELEPHONE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="116" height="20" uuid="c703c116-b050-4586-abc9-366573ce35c1"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="57" height="20" uuid="37f985d8-b9bd-4211-bb72-6fcc8b88ba42"/>
+				<textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="68" height="20" uuid="8a4a0386-e316-48df-b714-adde4769c4fa"/>
+				<textFieldExpression><![CDATA[$F{first_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="66" height="20" uuid="5ce1cf15-fa58-4e58-b7a3-fe511be6753e"/>
+				<textFieldExpression><![CDATA[$F{national_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="0" width="66" height="20" uuid="3d72f65b-d6ca-4c86-841a-d4cc98c0e39d"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="0" width="76" height="20" uuid="2d34344f-8c95-40c1-9d5d-89305b17a4cc"/>
+				<textFieldExpression><![CDATA[$F{telephone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="48" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="304" y="24" width="76" height="20" uuid="ce8adf21-8609-4b49-80f5-73e4e0ad57ac"/>
+				<text><![CDATA[generated on ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="380" y="24" width="100" height="20" uuid="c8325015-0252-4e15-bb4a-88334297dcdb"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="480" y="24" width="75" height="20" uuid="6032268e-78de-4480-b6a5-3c39ac6c519e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
